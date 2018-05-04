@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">xsandroid-base</string>
+    <string name="app_error">未知错误，程序即将关闭</string>
+    <string name="crash_create_file_error">创建文件错误</string>
+</resources>

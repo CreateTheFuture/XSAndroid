@@ -1,0 +1,1 @@
+include ':xsandroid-sample', ':xsandroid-base', ':xsandroid-utils', ':xsandroid-communication'

@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.appcompat
+    testImplementation rootProject.ext.junit
+    androidTestImplementation rootProject.ext.runner
+    androidTestImplementation rootProject.ext.espresso
+    api rootProject.ext.rxJava
+    api rootProject.ext.rxAndroid
+    api rootProject.ext.retrofit
+    api rootProject.ext.retrofitConverterGson
+    api rootProject.ext.retrofitAdapterRxJava2
+    api rootProject.ext.rxlifecycle
+    api rootProject.ext.rxlifecycleComponents
+    implementation rootProject.ext.okHttpLogging
+    implementation project(':xsandroid-base')
+}

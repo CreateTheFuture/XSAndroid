@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    minSdkVersion = 16
+    compileSdkVersion = 26
+    targetSdkVersion = compileSdkVersion
+    buildToolsVersion = '26.0.2'
+
+    supportLibVersion = '27.0.2'
+
+    appcompat = "com.android.support:appcompat-v7:$supportLibVersion"
+    junit = "junit:junit:4.12"
+    runner = "com.android.support.test:runner:1.0.1"
+    espresso = "com.android.support.test.espresso:espresso-core:3.0.1"
+    gson = "com.google.code.gson:gson:2.8.2"
+    rxJava = "io.reactivex.rxjava2:rxjava:2.1.7"
+    rxAndroid = "io.reactivex.rxjava2:rxandroid:2.0.1"
+    retrofit = "com.squareup.retrofit2:retrofit:2.3.0"
+    retrofitConverterGson = "com.squareup.retrofit2:converter-gson:2.3.0"
+    retrofitAdapterRxJava2 = "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    okHttpLogging = "com.squareup.okhttp3:logging-interceptor:3.9.1"
+    rxlifecycle = "com.trello.rxlifecycle2:rxlifecycle:2.2.1"
+    rxlifecycleComponents = 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+}
