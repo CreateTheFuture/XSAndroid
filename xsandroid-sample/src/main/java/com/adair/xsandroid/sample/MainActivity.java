@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity {
         File file = getApplication().getExternalFilesDir("download");
         if (file != null && !file.exists()) {
             if (!file.mkdirs()) {
-                LogUtils.d("11111111");
+                LogUtils.d("1111111111");
             }
         }
         DownloadManager.getInstance().download("http://n4.qnfen.cn/h14/dsy/qinjianshen.apk",
